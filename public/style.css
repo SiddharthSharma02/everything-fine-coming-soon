@@ -1,0 +1,211 @@
+/* Fonts & Base */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #2e463a;
+    color: #e7d9bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(231, 217, 187, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    max-width: 500px;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  .hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: #e7d9bb;
+  }
+  
+  .hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #e7d9bb;
+    line-height: 1.6;
+  }
+  
+  /* Buttons */
+  .primary-btn {
+    background: #e7d9bb;
+    color: #2e463a;
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    background: #fff;
+  }
+  
+  /* Modal */
+  .modal {
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+
+  .modal-content {
+    background: linear-gradient(145deg, #3a5045, #25382e);
+    border: 1px solid rgba(231, 217, 187, 0.1);
+    border-radius: 20px;
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    animation: slideIn 0.4s ease;
+  }
+  
+  .modal-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    color: #e7d9bb;
+  }
+  
+  .modal-content p {
+    margin-bottom: 1.5rem;
+    color: #e7d9bb;
+  }
+  
+  /* Form */
+  form input {
+    width: 100%;
+    padding: 0.8rem 0.2rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-bottom: 1px solid rgba(231, 217, 187, 0.3);
+    background: transparent;
+    color: #e7d9bb;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input:focus {
+    outline: none;
+    border-color: #e7d9bb;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #e7d9bb;
+    transition: 0.3s;
+  }
+  
+  .close-btn:hover {
+    color: #fff;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .modal.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Hide animation */
+  .modal.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+/* Background Leaves */
+.leaves-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.leaf {
+  position: absolute;
+  width: 250px;
+  height: auto;
+  opacity: 0.2;
+  animation: sway 15s infinite alternate;
+}
+
+.leaf-1 {
+  top: 5%;
+  left: 5%;
+  transform: rotate(-20deg);
+  animation-duration: 18s;
+}
+
+.leaf-2 {
+  bottom: 5%;
+  right: 5%;
+  transform: rotate(160deg);
+  animation-duration: 22s;
+}
+
+@keyframes sway {
+  from {
+    transform: rotate(-20deg) translateX(-10px);
+  }
+  to {
+    transform: rotate(20deg) translateX(10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .leaf {
+    display: none;
+  }
+}
+  

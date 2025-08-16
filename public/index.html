@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everything Fine | Coming Soon</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Background Leaf Illustrations -->
+  <div class="leaves-container">
+    <img src="/assets/vine1.png" alt="Leaf Illustration" class="leaf leaf-1" />
+    <img src="/assets/vine2.png" alt="Leaf Illustration" class="leaf leaf-2" />
+  </div>
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Everything Fine</h1>
+        <p>
+          Something sweet is coming soon. Stay tuned for the launch of our
+          exclusive monk fruit-based products.
+        </p>
+        <button id="remind-me-btn" class="primary-btn">✨ Get Notified</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Reminder Modal -->
+  <div id="reminder-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Be the First to Know</h2>
+      <p>Subscribe and we’ll notify you as soon as we launch.</p>
+      <form id="reminder-form">
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <input type="email" id="email" name="email" placeholder="Your Email" required />
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone (Optional)" />
+        <button type="submit" class="primary-btn">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
